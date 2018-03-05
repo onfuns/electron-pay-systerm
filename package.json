@@ -1,5 +1,5 @@
 {
-  "name": "onfuns",
+  "name": "electron-pay-systerm",
   "version": "0.0.1",
   "main":"app.js",
   "description": "工资智能计算软件",
