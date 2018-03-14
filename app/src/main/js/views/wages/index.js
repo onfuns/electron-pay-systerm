@@ -232,11 +232,7 @@ class Wages extends Component {
         }
         /**社保扣除算法 */
         if(item['社保缴纳'] == '是'){
-          if(item['是否城镇'] == '是'){
-            item['社保扣除'] = -this.round(sbjs*0.105+4,1)
-          }else{
-            item['社保扣除'] = -this.round(sbjs*0.105+4,1)
-          }
+          item['社保扣除'] = -this.round(sbjs*0.105,2)
         }else{
           item['社保扣除'] = 0
         }
