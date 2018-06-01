@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { configureStore, history } from './store'
-import  './assets/css/Common.less'
+import './assets/css/Common.less'
 import App from './app'
 
 const render = (Component) => {
