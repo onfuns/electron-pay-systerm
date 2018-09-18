@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
-import {
-  Form, Icon, Input, Button, Table, Select,
-  Checkbox, Upload, message, Row, Col, Switch
-} from 'antd';
-import moment from 'moment'
+import { Form, Input, Button, Table, Select, Checkbox, message, Row, Col } from 'antd';
 import XLSX from 'xlsx'
-import styles from './Wages.less'
+import styles from './style.less'
 import { saveFile } from '../../utils/Utils'
 const FormItem = Form.Item
 const Option = Select.Option

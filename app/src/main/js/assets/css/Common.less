@@ -1,9 +1,27 @@
+@import "~antd/dist/antd.less";
+@primary-color :#f26c23; //#1DA57A;
+@border-radius-base  :2px;
+@table-padding-vertical: 8px;
+@table-padding-horizontal: 15px;
+@font-family : Consolas,"microsoft yahei",Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+::-webkit-scrollbar{
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  border-radius: 9px;
+}
+::-webkit-scrollbar-thumb{
+  background: #19AA8D;
+  border-radius: 9px;
+  background-clip: content-box;
+  border: 5px solid transparent;
+}
 .mainLayout{
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
-  bottom: 0;
+  bottom: 20px;
   margin: 0;
   .ant-table-thead > tr > th, .ant-table-tbody > tr > td{
     padding: 8px

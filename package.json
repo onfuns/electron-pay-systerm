@@ -1,24 +1,22 @@
 {
   "name": "electron-pay-systerm",
   "version": "0.0.1",
-  "main":"app.js",
+  "main": "app.js",
   "description": "工资智能计算软件",
   "scripts": {
     "hot": "webpack-dev-server --color --config ./configs/webpack.dev.config.js",
     "dev": "cross-env NODE_ENV=development electron ./app/src/main/app.js",
     "build": "webpack -p --progress --color --config ./configs/webpack.prod.config.js",
     "packageMac": "electron-packager ./app/build onfuns --out ./dist --platform=darwin --arch=x64 --icon=logo.icns --version=0.0.1 --overwrite --no-prune  --ignore=.babelrc --ignore=configs --ignore=app/src",
-    "packageWin": "electron-packager ./app/build onfuns --out ./dist --platform=win32 --arch=ia32 --icon=logo.ico --version=0.0.1 --overwrite --no-prune --ignore=.babelrc --ignore=configs --ignore=app/src",
-    "test": "jest"
+    "packageWin": "electron-packager ./app/build onfuns --out ./dist --platform=win32 --arch=ia32 --icon=logo.ico --version=0.0.1 --overwrite --no-prune --ignore=.babelrc --ignore=configs --ignore=app/src"
   },
   "keywords": [
     "Electron",
     "react"
   ],
   "devDependencies": {
-    "antd": "^2.12.8",
+    "antd": "^3.9.2",
     "babel-core": "^6.24.0",
-    "babel-jest": "^19.0.0",
     "babel-loader": "^6.4.0",
     "babel-plugin-import": "^1.4.0",
     "babel-polyfill": "^6.23.0",
@@ -31,31 +29,27 @@
     "electron": "^1.7.5",
     "electron-devtools-installer": "^2.1.0",
     "electron-packager": "^9.0.1",
-    "enzyme": "^2.7.1",
-    "eslint": "^3.17.1",
-    "eslint-config-google": "^0.7.1",
+    "electron-updater": "^2.21.10",
     "extract-text-webpack-plugin": "^2.1.2",
-    "jest": "^19.0.2",
+    "fs-extra": "^7.0.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
-    "react": "^15.4.2",
-    "react-addons-test-utils": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "mobx": "^5.1.1",
+    "mobx-react": "^5.2.8",
+    "react": "^16.5.1",
+    "react-beautiful-dnd": "^9.0.2",
+    "react-dom": "^16.5.1",
     "react-hot-loader": "^3.0.0-beta.6",
-    "react-redux": "^5.0.3",
-    "react-router": "^4.2.0",
-    "react-router-config": "^1.0.0-beta.4",
-    "react-router-dom": "4.0.0",
-    "react-router-redux": "^4.0.8",
-    "react-test-renderer": "^15.4.2",
-    "redux": "^3.6.0",
-    "redux-thunk": "^2.2.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
     "style-loader": "^0.18.2",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1",
     "webpack-merge": "^4.1.0",
     "webpack-node-externals": "^1.2.0",
-    "xlsx": "^0.11.3"
+    "xlsx": "^0.14.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
 }

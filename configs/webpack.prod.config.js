@@ -4,7 +4,7 @@ const merge = require('webpack-merge')
 let CopyWebpackPlugin = require('copy-webpack-plugin');
 let baseWebpackConfig = require('./webpack.base.config')
 
-module.exports = merge(baseWebpackConfig,{
+module.exports = merge(baseWebpackConfig, {
 	context: path.join(__dirname, '../app'),
 	entry: {
 		'app': [
@@ -24,24 +24,24 @@ module.exports = merge(baseWebpackConfig,{
 	plugins: [
 		new CopyWebpackPlugin([
 			{
-				from: './src/main/app.js', 
+				from: './src/main/app.js',
 				to: path.join(__dirname, '../app/build')
 			},
 			{
-				from: './src/main/index.html', 
+				from: './src/main/index.html',
 				to: path.join(__dirname, '../app/build')
 			},
 			{
-				from: '../package.json', 
+				from: '../package.json',
 				to: path.join(__dirname, '../app/build')
 			}
 		]),
 		new webpack.optimize.UglifyJsPlugin({
-      sourceMap: false,
-      compress: {
-        warnings: false
-      }
-    }),
+			sourceMap: false,
+			compress: {
+				warnings: false
+			}
+		}),
 		new webpack.NamedModulesPlugin()
 	],
 })

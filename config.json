@@ -1,0 +1,122 @@
+{
+  "name": "tempalte",
+  "personDefault": [
+    {
+      "name": "姓名"
+    },
+    {
+      "name": "是否转正"
+    },
+    {
+      "name": "试用薪资"
+    },
+    {
+      "name": "转正薪资"
+    },
+    {
+      "name": "转正前自然天数"
+    },
+    {
+      "name": "转正后自然天数"
+    },
+    {
+      "name": "试用期事假"
+    },
+    {
+      "name": "事假天数"
+    },
+    {
+      "name": "入职离职缺勤天数"
+    }
+  ],
+  "personExtra": [],
+  "wagesPlusDefault": [
+    {
+      "name": "通讯补贴"
+    },
+    {
+      "name": "工龄工资"
+    }
+  ],
+  "wagesPlusExtra": [
+    {
+      "name": "变动工资"
+    }
+  ],
+  "wagesMinusDefault": [
+    {
+      "name": "缺卡扣费"
+    },
+    {
+      "name": "迟到扣费"
+    },
+    {
+      "name": "其他扣除"
+    }
+  ],
+  "wagesMinusExtra": [],
+  "taxDefault": [
+    {
+      "name": "通讯补贴"
+    }
+  ],
+  "taxExtra": [],
+  "socialSecurity": [
+    {
+      "name": "养老保险",
+      "floor": 2819.25,
+      "upper": 14096.25,
+      "company": 14,
+      "personal": "8",
+      "checked": true
+    },
+    {
+      "name": "医疗保险",
+      "floor": 2819.25,
+      "upper": 14096.25,
+      "company": 10.5,
+      "personal": 2,
+      "checked": true
+    },
+    {
+      "name": "失业保险",
+      "floor": 2819.25,
+      "upper": 14096.25,
+      "company": 0.5,
+      "personal": 0.5,
+      "checked": false
+    },
+    {
+      "name": "生育保险",
+      "floor": 2819.25,
+      "upper": 14096.25,
+      "company": 1.2,
+      "personal": 0,
+      "checked": false
+    },
+    {
+      "name": "工伤保险",
+      "floor": 2819.25,
+      "upper": 14096.25,
+      "company": 0.2,
+      "personal": 0,
+      "checked": false
+    },
+    {
+      "name": "公积金",
+      "floor": 1860,
+      "upper": 21980,
+      "company": 12,
+      "personal": 12,
+      "checked": true
+    },
+    {
+      "name": "个税",
+      "floor": 3500,
+      "upper": 3500,
+      "company": 0,
+      "personal": 0,
+      "checked": true
+    }
+  ]
+}

@@ -1,22 +1,29 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { HashRouter as RouterContainer } from 'react-router-dom'
 import RootRouter from './routes'
-import { Layout, Button, Icon } from 'antd';
-const { Content } = Layout
-import Headers from './components/common/Header'
+import { Layout } from 'antd';
+import Headers from './components/Layout/Header'
+import Sider from './components/Layout/Sider'
 
+const styles = {
+  content: {
+    background: '#fff',
+    padding: 20,
+    paddingBottom: 0,
+    display: 'flex',
+    flex: 1
+  }
+}
 class App extends Component {
   render() {
     return (
       <RouterContainer>
         <Layout className="mainLayout">
-          <Layout>
-            <Headers />
-            <Content style={{ background: '#fff', padding: 20 }}>
-              <RootRouter />
-            </Content>
-          </Layout>
+          {/* <Headers /> */}
+          <div style={styles.content}>
+            <Sider />
+            <RootRouter />
+          </div>
         </Layout>
       </RouterContainer>
     );

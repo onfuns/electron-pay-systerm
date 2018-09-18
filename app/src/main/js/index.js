@@ -1,18 +1,18 @@
-'use strict';
-import React, { Component } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
-import { configureStore, history } from './store'
+import { Provider } from 'mobx-react'
+import store from './store/index'
 import './assets/css/Common.less'
 import App from './app'
+import { LocaleProvider } from 'antd';
+import zhCN from 'antd/lib/locale-provider/zh_CN';
 
-const render = (Component) => {
-	ReactDOM.render(
-		<Provider store={configureStore()}>
-			<Component />
-		</Provider>,
-		document.getElementById('root')
-	)
-}
 
-render(App)
+const Root = () => (
+	<Provider store={store}>
+		<LocaleProvider locale={zhCN}>
+			<App />
+		</LocaleProvider>
+	</Provider>
+)
+ReactDOM.render(<Root />, document.getElementById('root'))

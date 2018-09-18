@@ -1,19 +1,24 @@
 
-import React,{ Component } from 'react'
+import React, { Component } from 'react'
 import { Layout, Menu, Icon } from 'antd';
 import { Link } from 'react-router-dom'
-const { Header, Content, Sider } = Layout;
+const { Sider } = Layout;
 const SubMenu = Menu.SubMenu
 
-export default class MenuList extends Component{
-  constructor(props){
+export default class MenuList extends Component {
+  constructor(props) {
     super(props)
-    this.state= {
-      collapsed:false,
-      list:[{
-        name: '工资计算',
-        url: '/sum',
-        key:'sum',
+    this.state = {
+      collapsed: false,
+      list: [{
+        name: '薪资配置',
+        url: '/system',
+        key: 'system',
+        icon: 'bars'
+      }, {
+        name: '薪资计算',
+        url: '/',
+        key: 'sum',
         icon: 'bars'
       }]
     }
@@ -23,7 +28,8 @@ export default class MenuList extends Component{
       collapsed: !this.state.collapsed,
     })
   }
-  render(){
+
+  render() {
     const { list } = this.state
     const menu = list.map((subMenu) => {
       if (subMenu.children && subMenu.children.length) {
@@ -43,18 +49,18 @@ export default class MenuList extends Component{
         </Menu.Item>
       )
     })
-    return(
+    return (
       <Sider
         collapsible
         collapsed={this.state.collapsed}
         trigger={null}
       >
         <div className='mainLogo'></div>
-          <Menu theme="dark" defaultSelectedKeys={['sum']} mode="inline">
-            {menu}
-          </Menu>
-          <div onClick={this.onCollapse} style={{ position:'absolute',right:15,bottom:15,color:'#fff' }}>
-            <Icon type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'} />
+        <Menu theme="dark" defaultSelectedKeys={['system']} mode="inline">
+          {menu}
+        </Menu>
+        <div onClick={this.onCollapse} style={{ position: 'absolute', right: 15, bottom: 15, color: '#fff' }}>
+          <Icon type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'} />
         </div>
       </Sider>
     )

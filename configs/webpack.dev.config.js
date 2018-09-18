@@ -4,7 +4,7 @@ let path = require('path');
 let CopyWebpackPlugin = require('copy-webpack-plugin');
 let baseWebpackConfig = require('./webpack.base.config')
 
-module.exports = merge(baseWebpackConfig,{
+module.exports = merge(baseWebpackConfig, {
 	context: path.join(__dirname, '../app'),
 	devtool: 'inline-source-map',
 	entry: {
@@ -33,8 +33,8 @@ module.exports = merge(baseWebpackConfig,{
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.NamedModulesPlugin(),
 		new CopyWebpackPlugin([
-			{from: './src/main/app.js'},
-			{from: './src/main/index.html'}
+			{ from: './src/main/app.js' },
+			{ from: './src/main/index.html' }
 		])
 	]
 })

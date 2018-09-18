@@ -4,8 +4,9 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-/dist
+dist
 /app/build
+package-lock.json
 
 # Runtime data
 pids
