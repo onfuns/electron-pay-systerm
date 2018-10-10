@@ -3,6 +3,9 @@ import { Form, Input, Button, Table, Select, Checkbox, message, Row, Col } from 
 import XLSX from 'xlsx'
 import styles from './style.less'
 import { saveFile } from '../../utils/Utils'
+import Config from '../../../../../../config.json'
+import _ from 'lodash'
+const Tempalte = _.cloneDeep(Config)
 const FormItem = Form.Item
 const Option = Select.Option
 
