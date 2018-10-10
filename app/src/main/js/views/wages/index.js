@@ -1,9 +1,5 @@
 import React, { Component } from 'react'
-import {
-  Form, Icon, Input, Button, Table, Select,
-  Checkbox, Upload, message, Row, Col, Switch
-} from 'antd';
-import moment from 'moment'
+import { Form, Input, Button, Table, Select, Checkbox, message, Row, Col } from 'antd';
 import XLSX from 'xlsx'
 import styles from './Wages.less'
 import { saveFile } from '../../utils/Utils'
@@ -258,28 +254,28 @@ class Wages extends Component {
       }
       /**缴纳个税算法 */
       if (jlgs) {
-        let balance = item['应发工资'] + item['社保扣除'] + item['公积金'] - item['通讯补贴'] - 3500  //通讯补贴避税
+        let balance = item['应发工资'] + item['社保扣除'] + item['公积金'] - item['通讯补贴'] - 5000  //通讯补贴避税
         let tax = 0
-        if (balance > 0 && balance <= 1500) {
+        if (balance > 0 && balance <= 3000) {
           tax = balance * 0.03
         }
-        else if (balance > 1500 && balance <= 4500) {
-          tax = balance * 0.1 - 105
+        else if (balance > 3000 && balance <= 12000) {
+          tax = balance * 0.1 - 210
         }
-        else if (balance > 4500 && balance <= 9000) {
-          tax = balance * 0.2 - 555
+        else if (balance > 12000 && balance <= 25000) {
+          tax = balance * 0.2 - 1410
         }
-        else if (balance > 9000 && balance <= 35000) {
-          tax = balance * 0.25 - 1005
+        else if (balance > 25000 && balance <= 35000) {
+          tax = balance * 0.25 - 2660
         }
         else if (balance > 35000 && balance <= 55000) {
-          tax = balance * 0.3 - 2755
+          tax = balance * 0.3 - 4410
         }
         else if (balance > 55000 && balance <= 80000) {
-          tax = balance * 0.35 - 5505
+          tax = balance * 0.35 - 7160
         }
         else if (balance > 80000) {
-          tax = balance * 0.45 - 13505
+          tax = balance * 0.45 - 15160
         }
         item['缴纳个税'] = - this.round(tax, 2)
         item['实发工资'] = this.round(item['应发工资'] + item['社保扣除'] + item['公积金'] + (tax > 0 ? item['缴纳个税'] : 0), 2)

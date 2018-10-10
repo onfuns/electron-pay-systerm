@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { HashRouter as RouterContainer } from 'react-router-dom'
 import RootRouter from './routes'
-import { Layout, Button, Icon } from 'antd';
+import { Layout } from 'antd';
 const { Content } = Layout
 import Headers from './components/common/Header'
 
